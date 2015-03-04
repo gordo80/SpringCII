@@ -7,3 +7,12 @@ C:\Users\jorantes\Documents\Visual Studio 2012\Projects\HomeworkLab3\HomeworkLab
 C:\Users\jorantes\Documents\Visual Studio 2012\Projects\HomeworkLab3\HomeworkLab3\obj\Debug\HomeworkLab3.exe
 C:\Users\jorantes\Documents\Visual Studio 2012\Projects\HomeworkLab3\HomeworkLab3\obj\Debug\HomeworkLab3.pdb
 C:\Users\jorantes\Documents\Visual Studio 2012\Projects\HomeworkLab3\HomeworkLab3\obj\Debug\HomeworkLab3.csprojResolveAssemblyReference.cache
+C:\Users\jorantes\Documents\GitHub\SpringCII\HomeworkLab3\HomeworkLab3\bin\Debug\HomeworkLab3.exe.config
+C:\Users\jorantes\Documents\GitHub\SpringCII\HomeworkLab3\HomeworkLab3\obj\Debug\HomeworkLab3.exe
+C:\Users\jorantes\Documents\GitHub\SpringCII\HomeworkLab3\HomeworkLab3\obj\Debug\HomeworkLab3.pdb
+C:\Users\jorantes\Documents\GitHub\SpringCII\HomeworkLab3\HomeworkLab3\bin\Debug\HomeworkLab3.exe
+C:\Users\jorantes\Documents\GitHub\SpringCII\HomeworkLab3\HomeworkLab3\bin\Debug\HomeworkLab3.pdb
+C:\Users\jorantes\Documents\GitHub\SpringCII\HomeworkLab3\HomeworkLab3\obj\Debug\HomeworkLab3.Form1.resources
+C:\Users\jorantes\Documents\GitHub\SpringCII\HomeworkLab3\HomeworkLab3\obj\Debug\HomeworkLab3.Properties.Resources.resources
+C:\Users\jorantes\Documents\GitHub\SpringCII\HomeworkLab3\HomeworkLab3\obj\Debug\HomeworkLab3.csproj.GenerateResource.Cache
+C:\Users\jorantes\Documents\GitHub\SpringCII\HomeworkLab3\HomeworkLab3\obj\Debug\HomeworkLab3.csprojResolveAssemblyReference.cache

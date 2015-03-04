@@ -11,9 +11,9 @@ namespace HomeworkLab3
     class Worker
     {
         private delegate void Update(string message);
-        private Thread thread = new Thread(new ThreadStart(ThreadProc));
+        private Thread thread;
         //static Thread for joining
-        static Thread mainThread, thread1, thread2;
+        //static Thread mainThread, thread1, thread2;
         private ListBox _listBox = new ListBox();
         private volatile bool stop;
         private int _numberOfMessages;
@@ -22,19 +22,6 @@ namespace HomeworkLab3
         {
             this._listBox = listBox; this._numberOfMessages = numberOfMessages;
         }
-        //To access Listbox parameter
-        //public ListBox WorkersListBox
-        //{
-        //    get
-        //    {
-        //        return this._listBox;
-        //    }
-        //    set
-        //    {
-        //        // Can only be called in this class.
-        //        this._listBox = value;
-        //    }
-        //}
         //bool property stop
         public bool Stop
         {
@@ -47,13 +34,6 @@ namespace HomeworkLab3
                 // Can only be called in this class.
                 this.stop = value;
             }
-        }
-
-        //ThreadProc Methood
-        public static void ThreadProc()
-        {
-             //We will later add this method and implement it see step iii
-            Thread.Sleep(1000);
         }
         //This calls the worker to stop
         public void RequestStop()
@@ -71,8 +51,33 @@ namespace HomeworkLab3
         {
             if(this._listBox.InvokeRequired)
             {
-                
+                Update update = new Update(UpdateListBox);
+                this._listBox.Invoke(update, new object[] { message });
             }
+            else
+            {
+                this._listBox.Items.Add(message);
+            }
+        }
+
+        //ThreadProc Methood 
+        private void ThreadProc()
+        {
+            UpdateListBox("Thread {0} begin.");
+            
+            for (int i = 0; i < this._numberOfMessages; i++)
+            {
+                if (this.stop == true)
+                {
+                    break;
+                }
+                UpdateListBox("{0}. Message.");
+                i++;
+                Thread.Sleep(500);
+                UpdateListBox("Thread {0} end.");
+            }
+            //We will later add this method and implement it see step iii
+            
         }
     }
 }
