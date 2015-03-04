@@ -63,7 +63,7 @@ namespace HomeworkLab3
         //ThreadProc Methood 
         private void ThreadProc()
         {
-            UpdateListBox("Thread {0} begin.");
+            UpdateListBox("Thread {0} begin." + Thread.CurrentThread.ManagedThreadId);
             
             for (int i = 0; i < this._numberOfMessages; i++)
             {
@@ -71,10 +71,10 @@ namespace HomeworkLab3
                 {
                     break;
                 }
-                UpdateListBox("{0}. Message.");
+                UpdateListBox("{0}. Message." + Thread.CurrentThread.ManagedThreadId);
                 i++;
                 Thread.Sleep(500);
-                UpdateListBox("Thread {0} end.");
+                UpdateListBox("Thread {0} end." + Thread.CurrentThread.ManagedThreadId);
             }
             //We will later add this method and implement it see step iii
             
