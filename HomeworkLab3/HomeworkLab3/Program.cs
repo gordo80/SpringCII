@@ -18,12 +18,12 @@ namespace HomeworkLab3
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-            ThreadStart threadDelegate = new ThreadStart(Worker.ThreadProc);
-            Thread thread = new Thread(threadDelegate);
-            thread.Start();
-            //Calls the Join method for passing it the int timeOut parameter and returns
-            //the bool value from thread.Join(int). Int 0 False and 1 is equal to 1
-            Worker.Join(0);
+            //ThreadStart threadDelegate = new ThreadStart(Worker.ThreadProc);
+            //Thread thread = new Thread(threadDelegate);
+            //thread.Start();
+            ////Calls the Join method for passing it the int timeOut parameter and returns
+            ////the bool value from thread.Join(int). Int 0 False and 1 is equal to 1
+            //Worker.Join(0);
             
         }
     }

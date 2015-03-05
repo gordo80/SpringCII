@@ -35,9 +35,18 @@ namespace HomeworkLab3
         {
             listBox1.Items.Clear();
         }
+        //Onclosing protected method
         protected override void OnClosed(EventArgs e)
         {
             base.OnClosed(e);
+            if (this.worker != null)
+            {
+                Worker.Join(2000);
+            }
+            if (Worker.Join =! true)
+            {
+                MessageBox.Show("Worker failed to exit in 2000 milliseconds.");
+            }
         }
     }
 }
