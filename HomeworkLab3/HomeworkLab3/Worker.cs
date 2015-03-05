@@ -12,19 +12,19 @@ namespace HomeworkLab3
     {
         private delegate void Update(string message);
         private Thread thread;
-        //static Thread for joining
-        //static Thread mainThread, thread1, thread2;
-        private ListBox _listBox = new ListBox();
+        private ListBox listBox = new ListBox();
         private volatile bool stop;
-        private int _numberOfMessages;
-        //Constructor for ListBox and NumberMessages
+        private int numberOfMessages;
+        
+        //Constructor 
         public Worker(ListBox listBox, int numberOfMessages) 
         {
-            this._listBox = listBox; this._numberOfMessages = numberOfMessages;
+            this.listBox = listBox; this.numberOfMessages = numberOfMessages;
+            ThreadStart threadDelegate = new ThreadStart(ThreadProc);
+            thread = new Thread(threadDelegate);
+            thread.IsBackground = true;
+            thread.Start();
         }
-        //Thrread Start
-        ThreadStart start = new ThreadStart(ThreadProc);
-        //bool property stop
         public bool Stop
         {
             get
@@ -37,36 +37,16 @@ namespace HomeworkLab3
                 this.stop = value;
             }
         }
-        //This calls the worker to stop
-        public void RequestStop()
-        {
-            stop = true;
-        }
         //Add a public method called Join with a bool return and one parameter of type int named timeOut.
-        public static bool Join(int timeOut)
+        public bool Join(int timeOut)
         {
             return true;
         }
-
-        //Method for Updating List Box
-        private void UpdateListBox(string message)
-        {
-            if(this._listBox.InvokeRequired)
-            {
-                Update update = new Update(UpdateListBox);
-                this._listBox.Invoke(update, new object[] { message });
-            }
-            else
-            {
-                this._listBox.Items.Add(message);
-            }
-        }
-
         //ThreadProc Methood 
-        private static void ThreadProc()
+        private void ThreadProc()
         {
             //UpdateListBox("Thread {0} begin." + Thread.CurrentThread.ManagedThreadId);
-            
+
             //for (int i = 0; i < this._numberOfMessages; i++)
             //{
             //    if (this.stop == true)
@@ -79,7 +59,27 @@ namespace HomeworkLab3
             //    UpdateListBox("Thread {0} end." + Thread.CurrentThread.ManagedThreadId);
             //}
             //We will later add this method and implement it see step iii
-            
+
+        }        
+        //This calls the worker to stop
+        public void RequestStop()
+        {
+            stop = true;
+        }
+        
+
+        //Method for Updating List Box
+        private void UpdateListBox(string message)
+        {
+            if(this.listBox.InvokeRequired)
+            {
+                Update update = new Update(UpdateListBox);
+                this.listBox.Invoke(update, new object[] { message });
+            }
+            else
+            {
+                this.listBox.Items.Add(message);
+            }
         }
     }
 }
