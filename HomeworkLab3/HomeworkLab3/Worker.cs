@@ -22,6 +22,8 @@ namespace HomeworkLab3
         {
             this._listBox = listBox; this._numberOfMessages = numberOfMessages;
         }
+        //Thrread Start
+        ThreadStart start = new ThreadStart(ThreadProc);
         //bool property stop
         public bool Stop
         {
@@ -61,21 +63,21 @@ namespace HomeworkLab3
         }
 
         //ThreadProc Methood 
-        private void ThreadProc()
+        private static void ThreadProc()
         {
-            UpdateListBox("Thread {0} begin." + Thread.CurrentThread.ManagedThreadId);
+            //UpdateListBox("Thread {0} begin." + Thread.CurrentThread.ManagedThreadId);
             
-            for (int i = 0; i < this._numberOfMessages; i++)
-            {
-                if (this.stop == true)
-                {
-                    break;
-                }
-                UpdateListBox("{0}. Message." + Thread.CurrentThread.ManagedThreadId);
-                i++;
-                Thread.Sleep(500);
-                UpdateListBox("Thread {0} end." + Thread.CurrentThread.ManagedThreadId);
-            }
+            //for (int i = 0; i < this._numberOfMessages; i++)
+            //{
+            //    if (this.stop == true)
+            //    {
+            //        break;
+            //    }
+            //    UpdateListBox("{0}. Message." + Thread.CurrentThread.ManagedThreadId);
+            //    i++;
+            //    Thread.Sleep(500);
+            //    UpdateListBox("Thread {0} end." + Thread.CurrentThread.ManagedThreadId);
+            //}
             //We will later add this method and implement it see step iii
             
         }

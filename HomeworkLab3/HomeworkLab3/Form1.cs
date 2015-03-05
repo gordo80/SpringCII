@@ -42,11 +42,12 @@ namespace HomeworkLab3
             if (this.worker != null)
             {
                 Worker.Join(2000);
+               
             }
-            if (Worker.Join =! true)
-            {
-                MessageBox.Show("Worker failed to exit in 2000 milliseconds.");
-            }
+            //if (Worker.Join =! true)
+            //{
+            //    MessageBox.Show("Worker failed to exit in 2000 milliseconds.");
+            //}
         }
     }
 }
