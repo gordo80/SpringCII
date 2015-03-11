@@ -27,7 +27,7 @@ namespace HomeworkLab3
         {
             if (this.worker != null)
             {
-                worker.RequestStop();
+                worker.Stop =true;
             }
         }
 
@@ -41,13 +41,13 @@ namespace HomeworkLab3
             base.OnClosed(e);
             if (this.worker != null)
             {
-                Worker.Join(2000);
-               
+                worker.Join(2000);
+
             }
-            //if (Worker.Join =! true)
-            //{
-            //    MessageBox.Show("Worker failed to exit in 2000 milliseconds.");
-            //}
+            if (worker.Join(2000) == false)
+            {
+                MessageBox.Show("Worker failed to exit in 2000 milliseconds");
+            }
         }
     }
 }

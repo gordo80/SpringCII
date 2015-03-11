@@ -1,0 +1,5 @@
+---This text file is for recording the observations from steps 3 + 4, and stept 5.
+3) Got an error saying Worker Failed to exit in 2000 miliseconds.
+4) Threads were displaying and when I hit the stop button there were no errors on the Form.
+5) Why does the debugger wait for a few seconds? The debugger waits for seconds since the override void Onclosed was removed and there is no Join on the form that sends the 2000 mS Join the worker.
+5) Why does making the thread a background thread allow the application to exit quicker?  Background threads are identical to foreground threads, except that background threads do not prevent a process from terminating. Once all foreground threads belonging to a process have terminated, the common language runtime ends the process. Any remaining background threads are stopped and do not complete.

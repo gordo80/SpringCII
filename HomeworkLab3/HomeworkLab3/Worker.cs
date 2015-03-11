@@ -40,41 +40,33 @@ namespace HomeworkLab3
         //Add a public method called Join with a bool return and one parameter of type int named timeOut.
         public bool Join(int timeOut)
         {
-            return true;
+            thread.Join(timeOut);
+            return thread.Join(timeOut);
         }
         //ThreadProc Methood 
         private void ThreadProc()
         {
-            //UpdateListBox("Thread {0} begin." + Thread.CurrentThread.ManagedThreadId);
+            UpdateListBox(string.Format("Thread {0} begin.",Thread.CurrentThread.ManagedThreadId));
 
-            //for (int i = 0; i < this._numberOfMessages; i++)
-            //{
-            //    if (this.stop == true)
-            //    {
-            //        break;
-            //    }
-            //    UpdateListBox("{0}. Message." + Thread.CurrentThread.ManagedThreadId);
-            //    i++;
-            //    Thread.Sleep(500);
-            //    UpdateListBox("Thread {0} end." + Thread.CurrentThread.ManagedThreadId);
-            //}
-            //We will later add this method and implement it see step iii
-
+            for (int i = 0; i < this.numberOfMessages; i++)
+            {
+                if (this.stop == true)
+                {
+                    break;
+                }
+                UpdateListBox(string.Format("{0}. Message." , Thread.CurrentThread.ManagedThreadId));
+                i++;
+                Thread.Sleep(500);
+                UpdateListBox(string.Format("Thread {0} end." ,Thread.CurrentThread.ManagedThreadId));
+            }
         }        
-        //This calls the worker to stop
-        public void RequestStop()
-        {
-            stop = true;
-        }
-        
-
-        //Method for Updating List Box
+       
         private void UpdateListBox(string message)
         {
             if(this.listBox.InvokeRequired)
             {
                 Update update = new Update(UpdateListBox);
-                this.listBox.Invoke(update, new object[] { message });
+                this.listBox.Invoke(update, message);
             }
             else
             {
