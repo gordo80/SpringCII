@@ -1,0 +1,1 @@
+C:\Users\jorantes\Documents\GitHub\SpringCII\SignalingThreadsApplication\SignalingThreadsApplication\bin\Debug\SignalingThreadsApplication.exe.config
