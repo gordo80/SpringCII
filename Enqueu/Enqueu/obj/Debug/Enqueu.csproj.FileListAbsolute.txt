@@ -1,6 +1,0 @@
-C:\Users\jorantes\Documents\GitHub\SpringCII\Enqueu\Enqueu\bin\Debug\Enqueu.exe.config
-C:\Users\jorantes\Documents\GitHub\SpringCII\Enqueu\Enqueu\bin\Debug\Enqueu.exe
-C:\Users\jorantes\Documents\GitHub\SpringCII\Enqueu\Enqueu\bin\Debug\Enqueu.pdb
-C:\Users\jorantes\Documents\GitHub\SpringCII\Enqueu\Enqueu\obj\Debug\Enqueu.csprojResolveAssemblyReference.cache
-C:\Users\jorantes\Documents\GitHub\SpringCII\Enqueu\Enqueu\obj\Debug\Enqueu.exe
-C:\Users\jorantes\Documents\GitHub\SpringCII\Enqueu\Enqueu\obj\Debug\Enqueu.pdb

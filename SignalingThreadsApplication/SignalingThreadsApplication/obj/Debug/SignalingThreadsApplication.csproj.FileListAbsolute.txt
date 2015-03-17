@@ -1,9 +1,1 @@
 C:\Users\jorantes\Documents\GitHub\SpringCII\SignalingThreadsApplication\SignalingThreadsApplication\bin\Debug\SignalingThreadsApplication.exe.config
-C:\Users\jorantes\Documents\GitHub\SpringCII\SignalingThreadsApplication\SignalingThreadsApplication\obj\Debug\SignalingThreadsApplication.Form1.resources
-C:\Users\jorantes\Documents\GitHub\SpringCII\SignalingThreadsApplication\SignalingThreadsApplication\obj\Debug\SignalingThreadsApplication.Properties.Resources.resources
-C:\Users\jorantes\Documents\GitHub\SpringCII\SignalingThreadsApplication\SignalingThreadsApplication\obj\Debug\SignalingThreadsApplication.csproj.GenerateResource.Cache
-C:\Users\jorantes\Documents\GitHub\SpringCII\SignalingThreadsApplication\SignalingThreadsApplication\bin\Debug\SignalingThreadsApplication.exe
-C:\Users\jorantes\Documents\GitHub\SpringCII\SignalingThreadsApplication\SignalingThreadsApplication\bin\Debug\SignalingThreadsApplication.pdb
-C:\Users\jorantes\Documents\GitHub\SpringCII\SignalingThreadsApplication\SignalingThreadsApplication\obj\Debug\SignalingThreadsApplication.exe
-C:\Users\jorantes\Documents\GitHub\SpringCII\SignalingThreadsApplication\SignalingThreadsApplication\obj\Debug\SignalingThreadsApplication.pdb
-C:\Users\jorantes\Documents\GitHub\SpringCII\SignalingThreadsApplication\SignalingThreadsApplication\obj\Debug\SignalingThreadsApplication.csprojResolveAssemblyReference.cache

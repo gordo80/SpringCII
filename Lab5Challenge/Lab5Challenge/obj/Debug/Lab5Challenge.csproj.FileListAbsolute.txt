@@ -1,9 +1,0 @@
-C:\Users\jorantes\Documents\GitHub\SpringCII\Lab5Challenge\Lab5Challenge\bin\Debug\Lab5Challenge.exe.config
-C:\Users\jorantes\Documents\GitHub\SpringCII\Lab5Challenge\Lab5Challenge\bin\Debug\Lab5Challenge.exe
-C:\Users\jorantes\Documents\GitHub\SpringCII\Lab5Challenge\Lab5Challenge\bin\Debug\Lab5Challenge.pdb
-C:\Users\jorantes\Documents\GitHub\SpringCII\Lab5Challenge\Lab5Challenge\obj\Debug\Lab5Challenge.csprojResolveAssemblyReference.cache
-C:\Users\jorantes\Documents\GitHub\SpringCII\Lab5Challenge\Lab5Challenge\obj\Debug\Lab5Challenge.Form1.resources
-C:\Users\jorantes\Documents\GitHub\SpringCII\Lab5Challenge\Lab5Challenge\obj\Debug\Lab5Challenge.Properties.Resources.resources
-C:\Users\jorantes\Documents\GitHub\SpringCII\Lab5Challenge\Lab5Challenge\obj\Debug\Lab5Challenge.csproj.GenerateResource.Cache
-C:\Users\jorantes\Documents\GitHub\SpringCII\Lab5Challenge\Lab5Challenge\obj\Debug\Lab5Challenge.exe
-C:\Users\jorantes\Documents\GitHub\SpringCII\Lab5Challenge\Lab5Challenge\obj\Debug\Lab5Challenge.pdb

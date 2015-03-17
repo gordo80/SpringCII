@@ -1,5 +1,0 @@
-C:\Users\jorantes\Documents\GitHub\SpringCII\Generic Collections and Sorting\Generic Collections and Sorting\bin\Debug\Generic Collections and Sorting.exe.config
-C:\Users\jorantes\Documents\GitHub\SpringCII\Generic Collections and Sorting\Generic Collections and Sorting\bin\Debug\Generic Collections and Sorting.exe
-C:\Users\jorantes\Documents\GitHub\SpringCII\Generic Collections and Sorting\Generic Collections and Sorting\bin\Debug\Generic Collections and Sorting.pdb
-C:\Users\jorantes\Documents\GitHub\SpringCII\Generic Collections and Sorting\Generic Collections and Sorting\obj\Debug\Generic Collections and Sorting.exe
-C:\Users\jorantes\Documents\GitHub\SpringCII\Generic Collections and Sorting\Generic Collections and Sorting\obj\Debug\Generic Collections and Sorting.pdb
