@@ -13,10 +13,9 @@ namespace Generic_Collections_and_Sorting
         private string firstName;
         private int id;
         //
-        //ByFirstNameComparer first;
-        //ByLastNameComparer last;
-        //ByIdComparer idc;
-
+        public static readonly ByFirstNameComparer first;
+        public static readonly ByLastNameComparer last;
+        public static readonly ByIdComparer idc;
         public Person(string lastName, string firstName, int id)
         {
             this.lastName = lastName;

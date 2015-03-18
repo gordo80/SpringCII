@@ -8,24 +8,30 @@ namespace Generic_Collections_and_Sorting
 {
     class Program
     {
-        //Person.ByFirstNameComparer first;
-        //Person.ByLastNameComparer last;
+        //Person.ByFirstNameComparer first = new Person.ByFirstNameComparer();
+        //Person.ByLastNameComparer last = new Person.ByLastNameComparer();
+        //Person.ByIdComparer idc = new Person.ByIdComparer();
+        
         //Person.ByIdComparer idc;
         static void Main(string[] args)
         {
             
             List<Person> personList = new List<Person>();
-            //This is not working. I can't add a list to the Person's object.
-            personList.Add("test");
+            Person person1 = new Person("Cregg","Claudia Jean",291);
+            Person person2 = new Person("Lyman", "Joshua", 507);
+            
+            
+            personList.Add(p);
+            //Display(personList);
         }
 
-        private static void Display(List<string> list)
-        {
-            Console.WriteLine();
-            foreach (string s in list)
-            {
-                Console.WriteLine(s);
-            }
-        }
+        //private static void Display(List<Person> list)
+        //{
+        //    Console.WriteLine();
+        //    foreach (Person s in list)
+        //    {
+        //        Console.WriteLine(s);
+        //    }
+        //}
     }
 }
