@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,10 @@ namespace Generic_Collections_and_Sorting
         private string lastName;
         private string firstName;
         private int id;
+        //
+        //ByFirstNameComparer first;
+        //ByLastNameComparer last;
+        //ByIdComparer idc;
 
         public Person(string lastName, string firstName, int id)
         {
@@ -28,13 +33,131 @@ namespace Generic_Collections_and_Sorting
         {
             return String.Format("<{0}>: <{1}>, <{2}>", id, lastName, firstName);
         }
-        //IComparer<T>
-        class ByFirstNameComparer 
+        //FirstNameClass
+        public class ByFirstNameComparer:IComparer<Person>
         {
-            public interface IComparer<Person>
+
+            public int Compare(Person x, Person y)
             {
-            string CompareTo(Person obj);
-            } 
+                if (x == null)
+                {
+                    if (y == null)
+                    {
+                        // If x is null and y is null, they're 
+                        // equal.  
+                        return 0;
+                    }
+                    else
+                    {
+                        // If x is null and y is not null, y 
+                        // is greater.  
+                        return -1;
+                    }
+                }
+                else
+                {
+                    if (y == null)
+                    {
+                        return 1;
+                    }
+                    else
+                    {
+                        int ret = x.firstName.CompareTo(y.firstName);
+                        if (ret != 0)
+                        {
+                            return ret;
+                        }
+                        else
+                        {
+                            return x.firstName.CompareTo(y.firstName);
+                        }
+                    }
+                }
+            }
+        }
+        //LastNameClass
+        public class ByLastNameComparer : IComparer<Person>
+        {
+
+            public int Compare(Person x, Person y)
+            {
+                if (x == null)
+                {
+                    if (y == null)
+                    {
+                        // If x is null and y is null, they're 
+                        // equal.  
+                        return 0;
+                    }
+                    else
+                    {
+                        // If x is null and y is not null, y 
+                        // is greater.  
+                        return -1;
+                    }
+                }
+                else
+                {
+                    if (y == null)
+                    {
+                        return 1;
+                    }
+                    else
+                    {
+                        int ret = x.lastName.CompareTo(y.lastName);
+                        if (ret != 0)
+                        {
+                            return ret;
+                        }
+                        else
+                        {
+                            return x.lastName.CompareTo(y.lastName);
+                        }
+                    }
+                }
+            }
+        }
+        //ID Class
+        public class ByIdComparer : IComparer<Person>
+        {
+
+            public int Compare(Person x, Person y)
+            {
+                if (x == null)
+                {
+                    if (y == null)
+                    {
+                        // If x is null and y is null, they're 
+                        // equal.  
+                        return 0;
+                    }
+                    else
+                    {
+                        // If x is null and y is not null, y 
+                        // is greater.  
+                        return -1;
+                    }
+                }
+                else
+                {
+                    if (y == null)
+                    {
+                        return 1;
+                    }
+                    else
+                    {
+                        int ret = x.id.CompareTo(y.id);
+                        if (ret != 0)
+                        {
+                            return ret;
+                        }
+                        else
+                        {
+                            return x.id.CompareTo(y.id);
+                        }
+                    }
+                }
+            }
         }
     }
 }
