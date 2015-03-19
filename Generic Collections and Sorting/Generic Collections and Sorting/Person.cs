@@ -13,7 +13,15 @@ namespace Generic_Collections_and_Sorting
         private string firstName;
         private int id;
         //
-        public static readonly ByFirstNameComparer first;
+        
+        public static IComparer<Person> byLastNameComperaror
+        {
+            get
+            {
+                ByLastNameComparer byLNC = new ByLastNameComparer();
+                return byLNC;
+            }
+        }
         public static readonly ByLastNameComparer last;
         public static readonly ByIdComparer idc;
         public Person(string lastName, string firstName, int id)
@@ -46,6 +54,7 @@ namespace Generic_Collections_and_Sorting
                         // equal.  
                         return 0;
                     }
+
                     else
                     {
                         // If x is null and y is not null, y 
@@ -53,12 +62,14 @@ namespace Generic_Collections_and_Sorting
                         return -1;
                     }
                 }
+
                 else
                 {
                     if (y == null)
                     {
                         return 1;
                     }
+
                     else
                     {
                         int ret = x.firstName.CompareTo(y.firstName);
@@ -88,6 +99,7 @@ namespace Generic_Collections_and_Sorting
                         // equal.  
                         return 0;
                     }
+
                     else
                     {
                         // If x is null and y is not null, y 
@@ -95,12 +107,14 @@ namespace Generic_Collections_and_Sorting
                         return -1;
                     }
                 }
+
                 else
                 {
                     if (y == null)
                     {
                         return 1;
                     }
+
                     else
                     {
                         int ret = x.lastName.CompareTo(y.lastName);
@@ -122,20 +136,9 @@ namespace Generic_Collections_and_Sorting
 
             public int Compare(Person x, Person y)
             {
-                if (x == null)
+                if (x == null && y ==null)
                 {
-                    if (y == null)
-                    {
-                        // If x is null and y is null, they're 
-                        // equal.  
-                        return 0;
-                    }
-                    else
-                    {
-                        // If x is null and y is not null, y 
-                        // is greater.  
-                        return -1;
-                    }
+                    return 0;
                 }
                 else
                 {
