@@ -15,6 +15,7 @@ namespace HomeworkGroupProject
         private volatile bool m_bCustomerbusy;
         private object m_OLock;
         private CancellationToken m_CancelToken;
+        private Form1 m_form;
 
         //TODO : sharath, Is there a better way to store the transaction history
         private List<string> m_CustTxnHist;
@@ -52,16 +53,25 @@ namespace HomeworkGroupProject
             set { m_iAccountBalence = value; }
         }
 
-        public void AddTransactiontoHostory(string sTxnEntry)
+        public void AddTransactiontoHistory(string sTxnEntry)
         {
             m_CustTxnHist.Add(sTxnEntry);
+        }
+
+        public void PrintTransactionHistory()
+        {
+            m_form.UpdateListBox(" ##################  Customer Reached Goal, and transaction history  ################ ");
+            foreach(string sTxn in m_CustTxnHist)
+            {
+                m_form.UpdateListBox(sTxn);
+            }
         }
 
 
 
         //Constructor
 
-        public Customer(int CustomerID,int iInitialAmount, int iCustGoalAmt,CancellationToken CancelToken)
+        public Customer(int CustomerID,int iInitialAmount, int iCustGoalAmt,CancellationToken CancelToken,Form1 form)
         {
             m_iCustomerID = CustomerID;
             m_iAccountBalence = iInitialAmount;
@@ -69,6 +79,7 @@ namespace HomeworkGroupProject
             m_bCustomerbusy = false; // Set the customer as free.
 
             m_iCustomerGoalAmount = iCustGoalAmt;
+            m_form = form;
 
             //Instanciate an object for acquiring lock.
             //This lock will be per customer basis.

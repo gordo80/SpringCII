@@ -48,12 +48,9 @@ namespace Generic_Collections_and_Sorting
             personList.Add(person6);
             personList.Add(person7);
             Person.ByLastNameComparer lastnull = new Person.ByLastNameComparer();
-           // personList.Sort(lastnull);
-
+            personList.Sort(lastnull);
             
-
-
-            Display("test",personList);
+            Display("Sorted by Last Name with null objects:",personList);
         }
 
         private static void Display(string message,List<Person> list)

@@ -29,6 +29,7 @@ namespace HomeworkGroupProject
         private int iInitialCustomerBalence;
         private int iCustomerGoalAmount;
         private SynchronizationContext syncContext;
+        private SynchronizationContext syncContext1;
         public CancellationTokenSource CancelToken;
 
         private TransactionGenerator m_TransactionGenerator;
@@ -50,7 +51,7 @@ namespace HomeworkGroupProject
 
             //Disable the Stop button;
             btnStop.Enabled = false;
-
+/*
             //create a Task exit cancellation token
             CancelToken = new CancellationTokenSource();
 
@@ -58,7 +59,7 @@ namespace HomeworkGroupProject
             OBankQueue = new BankQueue(CancelToken.Token);
 
             syncContext = WindowsFormsSynchronizationContext.Current;
-
+*/
         }
 
 
@@ -108,14 +109,21 @@ namespace HomeworkGroupProject
             //Done with error checks.. start to allocate the resources.
             //Customer count, teller count, max amoun are fetched from UI, and resources are allocated base on that
 
-            
+            //create a Task exit cancellation token
+            CancelToken = new CancellationTokenSource();
+
+            //Create a bank queue
+            OBankQueue = new BankQueue(CancelToken.Token);
+
+            syncContext = WindowsFormsSynchronizationContext.Current;
+            syncContext1 = WindowsFormsSynchronizationContext.Current;
 
             //Create array of customers, and istanciate each customer and store the object in array.
             Customer[] CustomerArr = new Customer[iCustomerCount];
 
             for (int iCustID = 0; iCustID < iCustomerCount; iCustID++)
             {
-                CustomerArr[iCustID] = new Customer(iCustID, iInitialCustomerBalence, iCustomerGoalAmount, CancelToken.Token);
+                CustomerArr[iCustID] = new Customer(iCustID, iInitialCustomerBalence, iCustomerGoalAmount, CancelToken.Token,this);
             }
 
 
@@ -199,7 +207,7 @@ namespace HomeworkGroupProject
 
             //stop the threads
             this.CancelToken.Cancel();
-
+            EnableUIControlsOnStop();
 
             // Enable the start button and the text fields
             btnStart.Enabled = true;
@@ -210,11 +218,34 @@ namespace HomeworkGroupProject
             txtTellers.Enabled = true;
             txtInitVaultAmt.Enabled = true;
 
+            btnStop.Enabled = false;
+
+            Thread.Sleep(1000);
+            
+
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             ListBox.Items.Clear();
+        }
+
+        public void EnableUIControlsOnStop()
+        {
+            
+            syncContext1.Send(o =>
+            {
+                // Enable the start button and the text fields
+                btnStart.Enabled = true;
+                txtCustomers.Enabled = true;
+                txtCustGoalAmount.Enabled = true;
+                txtCustInitialAmount.Enabled = true;
+                txtMaxTxnAmout.Enabled = true;
+                txtTellers.Enabled = true;
+                txtInitVaultAmt.Enabled = true;
+
+                btnStop.Enabled = false;
+            },"");
         }
     }
 }

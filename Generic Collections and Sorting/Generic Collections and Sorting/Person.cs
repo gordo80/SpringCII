@@ -13,15 +13,7 @@ namespace Generic_Collections_and_Sorting
         private string firstName;
         private int id;
         //
-        
-        public static IComparer<Person> byLastNameComperaror
-        {
-            get
-            {
-                ByLastNameComparer byLNC = new ByLastNameComparer();
-                return byLNC;
-            }
-        }
+        public static readonly ByFirstNameComparer first;
         public static readonly ByLastNameComparer last;
         public static readonly ByIdComparer idc;
         public Person(string lastName, string firstName, int id)
@@ -46,43 +38,7 @@ namespace Generic_Collections_and_Sorting
 
             public int Compare(Person x, Person y)
             {
-                if (x == null)
-                {
-                    if (y == null)
-                    {
-                        // If x is null and y is null, they're 
-                        // equal.  
-                        return 0;
-                    }
-
-                    else
-                    {
-                        // If x is null and y is not null, y 
-                        // is greater.  
-                        return -1;
-                    }
-                }
-
-                else
-                {
-                    if (y == null)
-                    {
-                        return 1;
-                    }
-
-                    else
-                    {
-                        int ret = x.firstName.CompareTo(y.firstName);
-                        if (ret != 0)
-                        {
-                            return ret;
-                        }
-                        else
-                        {
-                            return x.firstName.CompareTo(y.firstName);
-                        }
-                    }
-                }
+               return string.Compare(x.firstName,y.firstName);
             }
         }
         //LastNameClass
@@ -91,43 +47,8 @@ namespace Generic_Collections_and_Sorting
 
             public int Compare(Person x, Person y)
             {
-                if (x == null)
-                {
-                    if (y == null)
-                    {
-                        // If x is null and y is null, they're 
-                        // equal.  
-                        return 0;
-                    }
-
-                    else
-                    {
-                        // If x is null and y is not null, y 
-                        // is greater.  
-                        return -1;
-                    }
-                }
-
-                else
-                {
-                    if (y == null)
-                    {
-                        return 1;
-                    }
-
-                    else
-                    {
-                        int ret = x.lastName.CompareTo(y.lastName);
-                        if (ret != 0)
-                        {
-                            return ret;
-                        }
-                        else
-                        {
-                            return x.lastName.CompareTo(y.lastName);
-                        }
-                    }
-                }
+                return string.Compare(x.lastName,y.lastName);
+                
             }
         }
         //ID Class
@@ -136,28 +57,17 @@ namespace Generic_Collections_and_Sorting
 
             public int Compare(Person x, Person y)
             {
-                if (x == null && y ==null)
+                if (x.id > y.id)
                 {
-                    return 0;
+                    return 1;
+                }
+                else if (x.id < y.id)
+                {
+                    return -1;
                 }
                 else
                 {
-                    if (y == null)
-                    {
-                        return 1;
-                    }
-                    else
-                    {
-                        int ret = x.id.CompareTo(y.id);
-                        if (ret != 0)
-                        {
-                            return ret;
-                        }
-                        else
-                        {
-                            return x.id.CompareTo(y.id);
-                        }
-                    }
+                    return 0;
                 }
             }
         }

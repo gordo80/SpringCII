@@ -45,44 +45,55 @@ namespace HomeworkGroupProject
             randTxnAmount = new Random();
             randTxnType = new Random();
 
-            while (true)
+            try
             {
-                int iRandTxnAmt;
-                int iRandTxnType;
-                int iRandCustID;
-
-                iRandTxnAmt = randTxnAmount.Next(iMaxTransactionAmount);
-                iRandTxnType = randTxnType.Next((int )TRANSACTION_TYPE.DEPOSIT + 1);
-                iRandCustID = randCust.Next(customerArray.Length);
-
-                //lets validate if customer is free
-
-                if (customerArray[iRandCustID].IsCustomerbusy)
+                while (true)
                 {
-                    form.UpdateListBox(string.Format("Transaction generator, found customer {0} is busy, try picking new customer", iRandCustID));
-                    continue;
+                    int iRandTxnAmt;
+                    int iRandTxnType;
+                    int iRandCustID;
+
+                    iRandTxnAmt = randTxnAmount.Next(iMaxTransactionAmount);
+                    iRandTxnType = randTxnType.Next((int)TRANSACTION_TYPE.DEPOSIT + 1);
+                    iRandCustID = randCust.Next(customerArray.Length);
+
+                    //lets validate if customer is free
+
+                    if (customerArray[iRandCustID].IsCustomerbusy)
+                    {
+                        form.UpdateListBox(string.Format("Transaction generator, found customer {0} is busy, try picking new customer", iRandCustID));
+                        continue;
+                    }
+
+
+                    // we found a free customer, lets mrk him as busy
+
+                    customerArray[iRandCustID].IsCustomerbusy = true;
+                    form.UpdateListBox(string.Format("Transaction generator, found free customer: {0}, Transaction type : {1}, Transaction amount ", iRandCustID, iRandTxnType, iRandTxnAmt));
+
+                    //CREATE TRANSACTION OBJECT AND INITIALIZE IT
+
+                    Transaction TxnEntry = new Transaction();
+                    TxnEntry.CustID = iRandCustID;
+                    TxnEntry.iTxnAmt = iRandTxnAmt;
+                    TxnEntry.TxnType = (TRANSACTION_TYPE)iRandTxnType;
+                    TxnEntry.OCust = customerArray[iRandCustID];
+
+                    bankqueue.Enqueue(TxnEntry);
+
+                    Thread.Sleep(40);
+                    this.cancelToken.ThrowIfCancellationRequested();
+
                 }
-
-
-                // we found a free customer, lets mrk him as busy
-
-                customerArray[iRandCustID].IsCustomerbusy = true;
-                form.UpdateListBox(string.Format("Transaction generator, found free customer: {0}, Transaction type : {1}, Transaction amount ", iRandCustID,iRandTxnType,iRandTxnAmt));
-
-                //CREATE TRANSACTION OBJECT AND INITIALIZE IT
-
-                Transaction TxnEntry = new Transaction();
-                TxnEntry.CustID = iRandCustID;
-                TxnEntry.iTxnAmt = iRandTxnAmt;
-                TxnEntry.TxnType = (TRANSACTION_TYPE)iRandTxnType;
-                TxnEntry.OCust = customerArray[iRandCustID];
-
-                bankqueue.Enqueue(TxnEntry);
-
-                Thread.Sleep(40);
-                this.cancelToken.ThrowIfCancellationRequested();
-
             }
-        }
+            catch (OperationCanceledException OCE)
+            {
+                form.UpdateListBox("Transaction Generator task is exiting ");
+                form.EnableUIControlsOnStop();
+                return;
+            }
+        }// End of TaskProc
+
+
     }
 }

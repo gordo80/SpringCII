@@ -61,9 +61,9 @@
             this.groupBank.Controls.Add(this.txtInitVaultAmt);
             this.groupBank.Controls.Add(this.txtCustomers);
             this.groupBank.Controls.Add(this.txtTellers);
-            this.groupBank.Location = new System.Drawing.Point(54, 9);
+            this.groupBank.Location = new System.Drawing.Point(54, 5);
             this.groupBank.Name = "groupBank";
-            this.groupBank.Size = new System.Drawing.Size(295, 117);
+            this.groupBank.Size = new System.Drawing.Size(338, 129);
             this.groupBank.TabIndex = 0;
             this.groupBank.TabStop = false;
             this.groupBank.Text = "Bank";
@@ -71,7 +71,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 86);
+            this.label3.Location = new System.Drawing.Point(7, 87);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 13);
             this.label3.TabIndex = 5;
@@ -80,7 +80,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 52);
+            this.label2.Location = new System.Drawing.Point(7, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 13);
             this.label2.TabIndex = 4;
@@ -97,7 +97,7 @@
             // 
             // txtInitVaultAmt
             // 
-            this.txtInitVaultAmt.Location = new System.Drawing.Point(136, 80);
+            this.txtInitVaultAmt.Location = new System.Drawing.Point(165, 84);
             this.txtInitVaultAmt.Name = "txtInitVaultAmt";
             this.txtInitVaultAmt.Size = new System.Drawing.Size(119, 20);
             this.txtInitVaultAmt.TabIndex = 2;
@@ -105,7 +105,7 @@
             // 
             // txtCustomers
             // 
-            this.txtCustomers.Location = new System.Drawing.Point(136, 45);
+            this.txtCustomers.Location = new System.Drawing.Point(165, 49);
             this.txtCustomers.Name = "txtCustomers";
             this.txtCustomers.Size = new System.Drawing.Size(119, 20);
             this.txtCustomers.TabIndex = 1;
@@ -113,7 +113,7 @@
             // 
             // txtTellers
             // 
-            this.txtTellers.Location = new System.Drawing.Point(136, 19);
+            this.txtTellers.Location = new System.Drawing.Point(165, 19);
             this.txtTellers.Name = "txtTellers";
             this.txtTellers.Size = new System.Drawing.Size(119, 20);
             this.txtTellers.TabIndex = 0;
@@ -123,9 +123,9 @@
             // 
             this.groupTransaction.Controls.Add(this.label4);
             this.groupTransaction.Controls.Add(this.txtMaxTxnAmout);
-            this.groupTransaction.Location = new System.Drawing.Point(452, 9);
+            this.groupTransaction.Location = new System.Drawing.Point(452, 5);
             this.groupTransaction.Name = "groupTransaction";
-            this.groupTransaction.Size = new System.Drawing.Size(387, 100);
+            this.groupTransaction.Size = new System.Drawing.Size(399, 53);
             this.groupTransaction.TabIndex = 1;
             this.groupTransaction.TabStop = false;
             this.groupTransaction.Text = "Transaction";
@@ -133,7 +133,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 31);
+            this.label4.Location = new System.Drawing.Point(23, 26);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(149, 13);
             this.label4.TabIndex = 1;
@@ -141,9 +141,9 @@
             // 
             // txtMaxTxnAmout
             // 
-            this.txtMaxTxnAmout.Location = new System.Drawing.Point(183, 22);
+            this.txtMaxTxnAmout.Location = new System.Drawing.Point(224, 19);
             this.txtMaxTxnAmout.Name = "txtMaxTxnAmout";
-            this.txtMaxTxnAmout.Size = new System.Drawing.Size(163, 20);
+            this.txtMaxTxnAmout.Size = new System.Drawing.Size(117, 20);
             this.txtMaxTxnAmout.TabIndex = 0;
             this.txtMaxTxnAmout.Text = "100";
             // 
@@ -153,9 +153,9 @@
             this.groupCustomer.Controls.Add(this.label5);
             this.groupCustomer.Controls.Add(this.txtCustInitialAmount);
             this.groupCustomer.Controls.Add(this.txtCustGoalAmount);
-            this.groupCustomer.Location = new System.Drawing.Point(54, 128);
+            this.groupCustomer.Location = new System.Drawing.Point(452, 64);
             this.groupCustomer.Name = "groupCustomer";
-            this.groupCustomer.Size = new System.Drawing.Size(785, 86);
+            this.groupCustomer.Size = new System.Drawing.Size(399, 70);
             this.groupCustomer.TabIndex = 2;
             this.groupCustomer.TabStop = false;
             this.groupCustomer.Text = "Customer";
@@ -163,7 +163,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(421, 40);
+            this.label6.Location = new System.Drawing.Point(23, 47);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(70, 13);
             this.label6.TabIndex = 3;
@@ -172,7 +172,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 40);
+            this.label5.Location = new System.Drawing.Point(23, 21);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 13);
             this.label5.TabIndex = 2;
@@ -180,25 +180,25 @@
             // 
             // txtCustInitialAmount
             // 
-            this.txtCustInitialAmount.Location = new System.Drawing.Point(581, 34);
+            this.txtCustInitialAmount.Location = new System.Drawing.Point(224, 44);
             this.txtCustInitialAmount.Name = "txtCustInitialAmount";
-            this.txtCustInitialAmount.Size = new System.Drawing.Size(181, 20);
+            this.txtCustInitialAmount.Size = new System.Drawing.Size(117, 20);
             this.txtCustInitialAmount.TabIndex = 1;
             this.txtCustInitialAmount.Text = "100";
             // 
             // txtCustGoalAmount
             // 
-            this.txtCustGoalAmount.Location = new System.Drawing.Point(136, 34);
+            this.txtCustGoalAmount.Location = new System.Drawing.Point(224, 18);
             this.txtCustGoalAmount.Name = "txtCustGoalAmount";
-            this.txtCustGoalAmount.Size = new System.Drawing.Size(158, 20);
+            this.txtCustGoalAmount.Size = new System.Drawing.Size(117, 20);
             this.txtCustGoalAmount.TabIndex = 0;
             this.txtCustGoalAmount.Text = "2000";
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(54, 587);
+            this.btnStart.Location = new System.Drawing.Point(54, 640);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 23);
+            this.btnStart.Size = new System.Drawing.Size(95, 34);
             this.btnStart.TabIndex = 3;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = true;
@@ -206,9 +206,9 @@
             // 
             // btnStop
             // 
-            this.btnStop.Location = new System.Drawing.Point(190, 587);
+            this.btnStop.Location = new System.Drawing.Point(182, 640);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(75, 23);
+            this.btnStop.Size = new System.Drawing.Size(91, 34);
             this.btnStop.TabIndex = 4;
             this.btnStop.Text = "Stop";
             this.btnStop.UseVisualStyleBackColor = true;
@@ -216,9 +216,9 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(776, 587);
+            this.btnClear.Location = new System.Drawing.Point(755, 640);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.Size = new System.Drawing.Size(96, 34);
             this.btnClear.TabIndex = 5;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -227,15 +227,15 @@
             // ListBox
             // 
             this.ListBox.FormattingEnabled = true;
-            this.ListBox.Location = new System.Drawing.Point(54, 240);
+            this.ListBox.Location = new System.Drawing.Point(54, 188);
             this.ListBox.Name = "ListBox";
-            this.ListBox.Size = new System.Drawing.Size(797, 342);
+            this.ListBox.Size = new System.Drawing.Size(797, 433);
             this.ListBox.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(51, 217);
+            this.label1.Location = new System.Drawing.Point(51, 155);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 13);
             this.label1.TabIndex = 7;
@@ -245,7 +245,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(904, 623);
+            this.ClientSize = new System.Drawing.Size(904, 699);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ListBox);
             this.Controls.Add(this.btnClear);
