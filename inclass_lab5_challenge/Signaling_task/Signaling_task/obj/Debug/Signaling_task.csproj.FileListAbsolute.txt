@@ -10,3 +10,9 @@ Z:\Sharath\inclass_lab4_challenge\Signaling_task\Signaling_task\obj\Debug\Signal
 C:\Users\jorantes\Documents\GitHub\SpringCII\inclass_lab5_challenge\Signaling_task\Signaling_task\bin\Debug\Signaling_task.exe.config
 C:\Users\jorantes\Documents\GitHub\SpringCII\inclass_lab5_challenge\Signaling_task\Signaling_task\obj\Debug\Signaling_task.exe
 C:\Users\jorantes\Documents\GitHub\SpringCII\inclass_lab5_challenge\Signaling_task\Signaling_task\obj\Debug\Signaling_task.pdb
+C:\Users\jorantes\Documents\GitHub\SpringCII\inclass_lab5_challenge\Signaling_task\Signaling_task\bin\Debug\Signaling_task.exe
+C:\Users\jorantes\Documents\GitHub\SpringCII\inclass_lab5_challenge\Signaling_task\Signaling_task\bin\Debug\Signaling_task.pdb
+C:\Users\jorantes\Documents\GitHub\SpringCII\inclass_lab5_challenge\Signaling_task\Signaling_task\obj\Debug\Signaling_task.csprojResolveAssemblyReference.cache
+C:\Users\jorantes\Documents\GitHub\SpringCII\inclass_lab5_challenge\Signaling_task\Signaling_task\obj\Debug\Signaling_task.Form1.resources
+C:\Users\jorantes\Documents\GitHub\SpringCII\inclass_lab5_challenge\Signaling_task\Signaling_task\obj\Debug\Signaling_task.Properties.Resources.resources
+C:\Users\jorantes\Documents\GitHub\SpringCII\inclass_lab5_challenge\Signaling_task\Signaling_task\obj\Debug\Signaling_task.csproj.GenerateResource.Cache

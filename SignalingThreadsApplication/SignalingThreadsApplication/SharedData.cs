@@ -12,6 +12,7 @@ namespace SignalingThreadsApplication
     {
         Queue<int?> q = null;
         private ManualResetEvent workReadyEvent;
+        private SharedData sharedata;
         //public constructor
         public SharedData(ManualResetEvent workReadyEvent)
         {   
@@ -26,6 +27,7 @@ namespace SignalingThreadsApplication
                 q.Enqueue(val);
                 workReadyEvent.Set();
             }
+
         }
         //Add a public method called Dequeue with a return of int? (Nullable<int>) and no parameters.
         public int? Dequeue()

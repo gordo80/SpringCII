@@ -9,3 +9,8 @@ Z:\SharingThreads\SharingThreads\obj\Debug\SharingThreads.pdb
 C:\Users\jorantes\Documents\GitHub\SpringCII\SharingThreads\SharingThreads\bin\Debug\SharingThreads.exe.config
 C:\Users\jorantes\Documents\GitHub\SpringCII\SharingThreads\SharingThreads\obj\Debug\SharingThreads.exe
 C:\Users\jorantes\Documents\GitHub\SpringCII\SharingThreads\SharingThreads\obj\Debug\SharingThreads.pdb
+C:\Users\jorantes\Documents\GitHub\SpringCII\SharingThreads\SharingThreads\bin\Debug\SharingThreads.exe
+C:\Users\jorantes\Documents\GitHub\SpringCII\SharingThreads\SharingThreads\bin\Debug\SharingThreads.pdb
+C:\Users\jorantes\Documents\GitHub\SpringCII\SharingThreads\SharingThreads\obj\Debug\SharingThreads.Form1.resources
+C:\Users\jorantes\Documents\GitHub\SpringCII\SharingThreads\SharingThreads\obj\Debug\SharingThreads.Properties.Resources.resources
+C:\Users\jorantes\Documents\GitHub\SpringCII\SharingThreads\SharingThreads\obj\Debug\SharingThreads.csproj.GenerateResource.Cache

@@ -39,7 +39,7 @@ namespace HomeworkGroupProject
         private void TaskProc()
         {
             //TODO: From the Form1 Class
-            //this.form.UpdateList(("Master.TaskProc started on thread :" + task.Id));
+            //this.form.UpdateList(("Master.TaskProc started on :" + task.Id));
 
             randCust = new Random();
             randTxnAmount = new Random();

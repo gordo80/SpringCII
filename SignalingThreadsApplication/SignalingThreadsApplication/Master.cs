@@ -25,16 +25,39 @@ namespace SignalingThreadsApplication
 
         private void ThreadProc()
         {
-            while (true)
+            
+            Random rand = new Random();
+            try
             {
-                Random rand = new Random();
-                Thread.Sleep(100);
-                this.shareData.Enqueue(rand.Next());
-
-                for (int rand = 0; rand < length; i++)
+                while (true)
                 {
                     
+                    Thread.Sleep(100);
+
+                    for (int i = 0; i < 21; i++)
+                    {
+                        //message stating how many integers it has processed since it started
+                        shareData.Enqueue(rand.Next());
+                        
+                        lbh.AddString(string.Format("Number of threads started: {0}", Thread.CurrentThread.ManagedThreadId));
+                    }
+                    lbh.AddString("Master.ThreadProc requested to stop.");
+                    manualResetEvent.WaitOne(1);
+                    // Implement ThreadInterruptException and ThreadAbortException
+                    //code to display here:
                 }
+            }
+            catch (ThreadInterruptedException tie)
+            {
+                lbh.AddString(tie.ToString());
+            }
+            catch (ThreadAbortException tae)
+            {
+                lbh.AddString(tae.ToString());
+            }
+            finally
+            {
+                lbh.AddString(string.Format("Thread {0} stopped", Thread.CurrentThread.ManagedThreadId));
             }
         }
     }
